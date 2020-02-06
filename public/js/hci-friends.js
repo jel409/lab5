@@ -5,6 +5,11 @@ $(document).ready(function() {
 	initializePage();
 })
 
+$(document).on('click','.anagram', function(e){
+	e.preventDefault();
+	var newText = anagrammedName($(this).text());
+	$(this).text(newText);
+});
 /*
  * Function that is called when the document is ready.
  */
@@ -44,3 +49,4 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
